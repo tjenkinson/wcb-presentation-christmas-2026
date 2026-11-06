@@ -1,0 +1,4 @@
+@layer third-party, app;
+
+@import "reveal.js/reveal.css" layer(third-party);
+@import "reveal.js/theme/black.css" layer(third-party);

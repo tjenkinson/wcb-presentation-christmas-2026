@@ -1,0 +1,46 @@
+@layer app {
+  :global(.reveal) {
+    :global(.slides) {
+      overflow: hidden;
+    }
+
+    &.fadeToBlack :global(.slides) > section {
+      transition: opacity 2.8s;
+    }
+
+    &.fadeToBlack :global(.slides) > section:global(.present) {
+      /* TODO set dynamically so when switching slides it still works right */
+      transition-delay: 3s;
+    }
+
+    &.fadeToBlack :global(.slides) > section:global(.past) {
+      opacity: 0;
+    }
+
+    &.fadeToBlack :global(.slides) > section:global(.future) {
+      opacity: 0;
+    }
+  }
+
+  .imgFull {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    transform: translate(var(--x-start), var(--y-start))
+      scale(var(--scale-start));
+    object-fit: contain;
+
+    &[data-transition="true"] {
+      transition: transform cubic-bezier(0.35, 0.08, 0, 1);
+      transition-duration: var(--duration);
+      transition-delay: var(--delay);
+    }
+
+    section:global(.present) &,
+    section:global(.past) & {
+      transform: translate(var(--x-end), var(--y-end)) scale(var(--scale-end));
+    }
+  }
+}
