@@ -1,4 +1,30 @@
 @layer app {
+  .snowSlide {
+    position: relative;
+  }
+
+  .snowBehind,
+  .snowInFront {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .snowBehind {
+    z-index: 0;
+  }
+
+  .snowInFront {
+    z-index: 2;
+  }
+
+  .imgFull {
+    position: relative;
+    z-index: 1;
+  }
+
   :global(.reveal) {
     :global(.slides) {
       overflow: hidden;
