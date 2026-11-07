@@ -9,9 +9,12 @@ const SLIDE_WIDTH = 1024;
 const SLIDE_HEIGHT = 768;
 
 document.documentElement.style.setProperty("--slide-width", `${SLIDE_WIDTH}px`);
-document.documentElement.style.setProperty("--slide-height", `${SLIDE_HEIGHT}px`);
+document.documentElement.style.setProperty(
+  "--slide-height",
+  `${SLIDE_HEIGHT}px`,
+);
 
-type PictureSlideProps = {
+export type PictureSlideProps = {
   url: string;
   scaleStart?: number;
   scaleEnd?: number;
@@ -100,7 +103,8 @@ const startSnowfall = () => {
 
   const snow = canvases.map((canvas) => {
     const context = canvas.getContext("2d");
-    if (!context) throw new Error("Unable to create a canvas rendering context");
+    if (!context)
+      throw new Error("Unable to create a canvas rendering context");
 
     // Flakes in the far layer are smaller and slower to look distant
     const depthScale = canvas.dataset.snow === "far" ? 0.55 : 1;
@@ -235,24 +239,14 @@ const logoSlideProps: PictureSlideProps = {
   snow: true,
 };
 
-const addBuffer = (time: number): number => {
+export const addBuffer = (time: number): number => {
   return time * 1000 * 1.4 - 2000;
 };
 
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
-
-  // puttin on the ritz
-  [
-    {
-      url: "/assets/Puttin On The Ritz/e985c67c720ac67151411d8854a190c3715fe2955b89f0e7da6f7815c5cb9361.jpg",
-      scaleStart: 180,
-      xStart: -100,
-      yStart: 40,
-      duration: addBuffer(192),
-    },
-  ],
+  // piece1,
   [logoSlideProps],
 ];
 
