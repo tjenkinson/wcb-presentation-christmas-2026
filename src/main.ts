@@ -86,6 +86,9 @@ type Snowflake = {
   opacity: number;
 };
 
+// Keep snow falling while the slide fades out after it stops being active
+const SNOW_LINGER_MS = 10_000;
+
 const startSnowfall = () => {
   const canvases = Array.from(
     document.querySelectorAll<HTMLCanvasElement>("canvas[data-snow]"),
@@ -149,18 +152,30 @@ const startSnowfall = () => {
     new ResizeObserver(resize).observe(canvas);
     resize();
 
-    return { canvas, context, flakes: () => flakes, resize };
+    return {
+      canvas,
+      context,
+      flakes: () => flakes,
+      resize,
+      lastPresentAt: null as number | null,
+    };
   });
 
   let animationFrame = 0;
   let previousTime = 0;
   const animate = (time: number) => {
     const slide = document.querySelector(".reveal .slides > section.present");
-    const activeSnow = snow.filter(
-      (layer) => layer.canvas.closest("section") === slide,
-    );
+    const activeSnow = snow.filter((layer) => {
+      if (layer.canvas.closest("section") === slide) layer.lastPresentAt = time;
+      if (layer.lastPresentAt === null) return false;
+      if (time - layer.lastPresentAt < SNOW_LINGER_MS) return true;
+
+      layer.lastPresentAt = null;
+      return false;
+    });
     if (document.hidden || activeSnow.length === 0) {
       animationFrame = 0;
+      previousTime = 0;
       return;
     }
 
