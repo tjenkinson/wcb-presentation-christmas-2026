@@ -4,9 +4,11 @@ import Reveal from "reveal.js";
 import NotesPlugin from "reveal.js/plugin/notes";
 import "./main.css";
 import styles from "./styles.module.scss";
+import { doctorWho } from "./slides";
 
 const SLIDE_WIDTH = 1024;
 const SLIDE_HEIGHT = 768;
+const FORCE_PICTURE_SLIDE: "start" | "end" | null = null;
 
 document.documentElement.style.setProperty("--slide-width", `${SLIDE_WIDTH}px`);
 document.documentElement.style.setProperty(
@@ -43,6 +45,17 @@ const pictureSlide = ({
     const maxOffset = (scale - 100) / 2;
     return (value / 100) * maxOffset;
   };
+
+  if (FORCE_PICTURE_SLIDE === "start") {
+    xEnd = xStart;
+    yEnd = yStart;
+    scaleEnd = scaleStart;
+  } else if (FORCE_PICTURE_SLIDE === "end") {
+    xStart = xEnd;
+    yStart = yEnd;
+    scaleStart = scaleEnd;
+  }
+
   return html`
     <section class=${snow ? styles.snowSlide : ""}>
       ${snow
@@ -239,14 +252,10 @@ const logoSlideProps: PictureSlideProps = {
   snow: true,
 };
 
-export const addBuffer = (time: number): number => {
-  return time * 1000 * 1.4 - 2000;
-};
-
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
-  // piece1,
+  doctorWho,
   [logoSlideProps],
 ];
 
@@ -283,19 +292,23 @@ const deck = new Reveal({
   hash: true,
   width: SLIDE_WIDTH,
   height: SLIDE_HEIGHT,
-  transition: styles.fadeToBlack as any /* TODO */,
-  // transition: "none",
+  transition: FORCE_PICTURE_SLIDE
+    ? "none"
+    : (styles.fadeToBlack as any) /* TODO */,
   backgroundTransition: "none",
   margin: 0,
   controls: "speaker-only",
   overview: false,
   progress: false,
   keyboardCondition: () => {
+    if (FORCE_PICTURE_SLIDE) return true;
+
     if (lastKey && Date.now() - lastKey < 1000) return false;
 
     lastKey = Date.now();
     return true;
   },
+  // press s for speaker view
   plugins: [NotesPlugin],
 });
 
