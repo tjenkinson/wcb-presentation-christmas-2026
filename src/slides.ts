@@ -212,7 +212,8 @@ export const doctorWho: PictureSlideProps[] = [
     xEnd: 100,
     yStart: 12,
     yEnd: 12,
-    duration: addBuffer(10),
+    delay: 4000,
+    duration: addBuffer(15),
   },
 ];
 
