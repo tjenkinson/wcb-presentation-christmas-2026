@@ -19,7 +19,44 @@ export const elfOverture: PictureSlideProps[] = [];
 
 export const howTheGrinchStoleChristmas: PictureSlideProps[] = [];
 
-export const polarExpress: PictureSlideProps[] = [];
+// TODO the zooms. times are done
+export const polarExpress: PictureSlideProps[] = [
+  {
+    url: "/assets/polar express/1.heif",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(30),
+  },
+  {
+    url: "/assets/polar express/2.heif",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(37),
+  },
+  {
+    url: "/assets/polar express/3.heif",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(83),
+  },
+  {
+    url: "/assets/polar express/4.heif",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(107),
+  },
+  {
+    url: "/assets/polar express/5.heif",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(95),
+  },
+];
 
 export const cowboyChristmas: PictureSlideProps[] = [];
 
