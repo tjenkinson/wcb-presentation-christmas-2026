@@ -4,11 +4,11 @@ import Reveal from "reveal.js";
 import NotesPlugin from "reveal.js/plugin/notes";
 import "./main.css";
 import styles from "./styles.module.scss";
-import { doctorWho } from "./slides";
+import { doctorWho, polarExpress } from "./slides";
 
 const SLIDE_WIDTH = 1024;
 const SLIDE_HEIGHT = 768;
-const FORCE_PICTURE_SLIDE: "start" | "end" | null = null;
+const FORCE_PICTURE_SLIDE: "start" | "end" | null = "start";
 
 document.documentElement.style.setProperty("--slide-width", `${SLIDE_WIDTH}px`);
 document.documentElement.style.setProperty(
@@ -255,6 +255,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  polarExpress,
   doctorWho,
   [logoSlideProps],
 ];
