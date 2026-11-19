@@ -60,9 +60,25 @@ export const hollyJollyChristmas: PictureSlideProps[] = [
   },
 ];
 
-export const felizNavidad: PictureSlideProps[] = [];
+export const felizNavidad: PictureSlideProps[] = [
+  {
+    url: "/assets/feliz navidad/1.jpg",
+    scaleStart: 240,
+    xStart: 60,
+    yStart: 30,
+    duration: addBuffer(150),
+  },
+];
 
-export const allIWantForChristmas: PictureSlideProps[] = [];
+export const allIWantForChristmas: PictureSlideProps[] = [
+  {
+    url: "/assets/all I want for christmas is you/1.png",
+    scaleStart: 200,
+    xStart: -30,
+    yStart: 30,
+    duration: addBuffer(180),
+  },
+];
 
 export const lastChristmas: PictureSlideProps[] = [
   {
@@ -241,7 +257,15 @@ export const fairytaleOfNewYork: PictureSlideProps[] = [
   },
 ];
 
-export const superMario: PictureSlideProps[] = [];
+export const superMario: PictureSlideProps[] = [
+  {
+    url: "/assets/super mario/1.webp",
+    scaleStart: 330,
+    xStart: -25,
+    yStart: 75,
+    duration: addBuffer(370),
+  },
+];
 
 export const doctorWho: PictureSlideProps[] = [
   {

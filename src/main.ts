@@ -5,17 +5,20 @@ import NotesPlugin from "reveal.js/plugin/notes";
 import "./main.css";
 import styles from "./styles.module.scss";
 import {
+  allIWantForChristmas,
   chickenRun,
   cowboyChristmas,
   doctorWho,
   elfOverture,
   fairytaleOfNewYork,
+  felizNavidad,
   hollyJollyChristmas,
   howTheGrinchStoleChristmas,
   jingleBells,
   lastChristmas,
   polarExpress,
   rockinChristmas,
+  superMario,
   walkingInTheAir,
 } from "./slides";
 
@@ -268,6 +271,9 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  superMario,
+  allIWantForChristmas,
+  felizNavidad,
   chickenRun,
   fairytaleOfNewYork,
   howTheGrinchStoleChristmas,
