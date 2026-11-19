@@ -8,6 +8,7 @@ import {
   cowboyChristmas,
   doctorWho,
   elfOverture,
+  fairytaleOfNewYork,
   hollyJollyChristmas,
   howTheGrinchStoleChristmas,
   jingleBells,
@@ -266,6 +267,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  fairytaleOfNewYork,
   howTheGrinchStoleChristmas,
   elfOverture,
   jingleBells,

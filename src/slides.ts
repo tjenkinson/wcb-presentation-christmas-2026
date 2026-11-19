@@ -217,7 +217,29 @@ export const cowboyChristmas: PictureSlideProps[] = [
   },
 ];
 
-export const fairytaleOfNewYork: PictureSlideProps[] = [];
+export const fairytaleOfNewYork: PictureSlideProps[] = [
+  {
+    url: "/assets/fairytale of new york/1.png",
+    scaleStart: 200,
+    xStart: 50,
+    yStart: 40,
+    duration: addBuffer(120),
+  },
+  {
+    url: "/assets/fairytale of new york/2.png",
+    scaleStart: 200,
+    xStart: 30,
+    yStart: 10,
+    duration: addBuffer(120),
+  },
+  {
+    url: "/assets/fairytale of new york/3.png",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 30,
+    duration: addBuffer(120),
+  },
+];
 
 export const superMario: PictureSlideProps[] = [];
 
