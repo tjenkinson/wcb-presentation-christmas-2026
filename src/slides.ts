@@ -363,4 +363,26 @@ export const chickenRun: PictureSlideProps[] = [
   },
 ];
 
-export const partyDanceMix: PictureSlideProps[] = [];
+export const partyDanceMix: PictureSlideProps[] = [
+  {
+    url: "/assets/party dance mix/1.jpg",
+    scaleStart: 150,
+    xStart: 0,
+    yStart: 100,
+    duration: addBuffer(80),
+  },
+  {
+    url: "/assets/party dance mix/2.jpg",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: -100,
+    duration: addBuffer(104),
+  },
+  {
+    url: "/assets/party dance mix/3.png",
+    scaleStart: 150,
+    xStart: 0,
+    yStart: 40,
+    duration: addBuffer(120),
+  },
+];

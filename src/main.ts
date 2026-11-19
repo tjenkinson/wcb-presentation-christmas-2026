@@ -16,6 +16,7 @@ import {
   howTheGrinchStoleChristmas,
   jingleBells,
   lastChristmas,
+  partyDanceMix,
   polarExpress,
   rockinChristmas,
   superMario,
@@ -271,6 +272,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  partyDanceMix,
   superMario,
   allIWantForChristmas,
   felizNavidad,
