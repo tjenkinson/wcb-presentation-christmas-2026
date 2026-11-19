@@ -7,9 +7,12 @@ import styles from "./styles.module.scss";
 import {
   cowboyChristmas,
   doctorWho,
+  elfOverture,
   hollyJollyChristmas,
+  jingleBells,
   lastChristmas,
   polarExpress,
+  rockinChristmas,
   walkingInTheAir,
 } from "./slides";
 
@@ -262,6 +265,9 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  elfOverture,
+  jingleBells,
+  rockinChristmas,
   lastChristmas,
   cowboyChristmas,
   walkingInTheAir,

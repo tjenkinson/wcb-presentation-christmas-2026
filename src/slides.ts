@@ -1,7 +1,22 @@
 import { addBuffer } from "./helpers";
 import { PictureSlideProps } from "./main";
 
-export const rockinChristmas: PictureSlideProps[] = [];
+export const rockinChristmas: PictureSlideProps[] = [
+  {
+    url: "/assets/rockin christmas/1.png",
+    scaleStart: 200,
+    xStart: 20,
+    yStart: -10,
+    duration: addBuffer(120),
+  },
+  {
+    url: "/assets/rockin christmas/2.png",
+    scaleStart: 200,
+    xStart: 30,
+    yStart: -30,
+    duration: addBuffer(120),
+  },
+];
 
 export const hollyJollyChristmas: PictureSlideProps[] = [
   {
@@ -84,11 +99,35 @@ export const walkingInTheAir: PictureSlideProps[] = [
   },
 ];
 
-export const jingleBells: PictureSlideProps[] = [];
+export const jingleBells: PictureSlideProps[] = [
+  {
+    url: "/assets/jingle bells/1.png",
+    scaleStart: 400,
+    xStart: 50,
+    yStart: -10,
+    duration: addBuffer(150),
+  },
+];
 
-export const whenIGrowUp: PictureSlideProps[] = [];
+export const whenIGrowUp: PictureSlideProps[] = [
+  {
+    url: "/assets/when I grow up/1.jpg",
+    scaleStart: 400,
+    xStart: 50,
+    yStart: -10,
+    duration: addBuffer(270),
+  },
+];
 
-export const elfOverture: PictureSlideProps[] = [];
+export const elfOverture: PictureSlideProps[] = [
+  {
+    url: "/assets/elf/1.jpeg",
+    scaleStart: 280,
+    xStart: 30,
+    yStart: 10,
+    duration: addBuffer(120),
+  },
+];
 
 export const howTheGrinchStoleChristmas: PictureSlideProps[] = [];
 
