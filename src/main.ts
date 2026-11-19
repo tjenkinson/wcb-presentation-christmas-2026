@@ -4,7 +4,13 @@ import Reveal from "reveal.js";
 import NotesPlugin from "reveal.js/plugin/notes";
 import "./main.css";
 import styles from "./styles.module.scss";
-import { doctorWho, polarExpress } from "./slides";
+import {
+  cowboyChristmas,
+  doctorWho,
+  hollyJollyChristmas,
+  polarExpress,
+  walkingInTheAir,
+} from "./slides";
 
 const SLIDE_WIDTH = 1024;
 const SLIDE_HEIGHT = 768;
@@ -255,6 +261,9 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  cowboyChristmas,
+  walkingInTheAir,
+  hollyJollyChristmas,
   polarExpress,
   doctorWho,
   [logoSlideProps],

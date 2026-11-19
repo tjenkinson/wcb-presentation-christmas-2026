@@ -3,13 +3,64 @@ import { PictureSlideProps } from "./main";
 
 export const rockinChristmas: PictureSlideProps[] = [];
 
+export const hollyJollyChristmas: PictureSlideProps[] = [
+  {
+    url: "/assets/holly jolly christmas/1.png",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 0,
+    duration: addBuffer(75),
+  },
+  // 1:20 - 2:49
+  {
+    url: "/assets/holly jolly christmas/2.png",
+    scaleStart: 200,
+    xStart: 60,
+    yStart: 20,
+    duration: addBuffer(90),
+  },
+  // 2:49 - 3:38
+  {
+    url: "/assets/holly jolly christmas/3.png",
+    scaleStart: 200,
+    xStart: -50,
+    yStart: 44,
+    duration: addBuffer(50),
+  },
+  // 5:32 - 7:30
+  {
+    url: "/assets/holly jolly christmas/4.png",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 0,
+    duration: addBuffer(120),
+  },
+  // 7:30 - 9:20
+  {
+    url: "/assets/holly jolly christmas/5.png",
+    scaleStart: 200,
+    xStart: 100,
+    yStart: 34,
+    duration: addBuffer(110),
+  },
+];
+
 export const felizNavidad: PictureSlideProps[] = [];
 
 export const allIWantForChristmas: PictureSlideProps[] = [];
 
 export const lastChristmas: PictureSlideProps[] = [];
 
-export const walkingInTheAir: PictureSlideProps[] = [];
+export const walkingInTheAir: PictureSlideProps[] = [
+  // 20 - 60 139 - 370
+  {
+    url: "/assets/snowman/1.jpg",
+    scaleStart: 400,
+    xStart: -2,
+    yStart: 10,
+    duration: addBuffer(271),
+  },
+];
 
 export const jingleBells: PictureSlideProps[] = [];
 
@@ -57,7 +108,24 @@ export const polarExpress: PictureSlideProps[] = [
   },
 ];
 
-export const cowboyChristmas: PictureSlideProps[] = [];
+export const cowboyChristmas: PictureSlideProps[] = [
+  // 29 - 2:42
+  {
+    url: "/assets/cowboy/1.png",
+    scaleStart: 210,
+    xStart: 0,
+    yStart: 22,
+    duration: addBuffer(130),
+  },
+  // 3:20 - 5:20
+  {
+    url: "/assets/cowboy/2.png",
+    scaleStart: 200,
+    xStart: 30,
+    yStart: 0,
+    duration: addBuffer(120),
+  },
+];
 
 export const fairytaleOfNewYork: PictureSlideProps[] = [];
 
