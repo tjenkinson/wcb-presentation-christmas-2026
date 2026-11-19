@@ -5,6 +5,7 @@ import NotesPlugin from "reveal.js/plugin/notes";
 import "./main.css";
 import styles from "./styles.module.scss";
 import {
+  chickenRun,
   cowboyChristmas,
   doctorWho,
   elfOverture,
@@ -267,6 +268,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  chickenRun,
   fairytaleOfNewYork,
   howTheGrinchStoleChristmas,
   elfOverture,

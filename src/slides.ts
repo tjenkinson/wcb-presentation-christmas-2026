@@ -329,6 +329,14 @@ export const doctorWho: PictureSlideProps[] = [
   },
 ];
 
-export const chickenRun: PictureSlideProps[] = [];
+export const chickenRun: PictureSlideProps[] = [
+  {
+    url: "/assets/chicken run/1.jpg",
+    scaleStart: 225,
+    xStart: 0,
+    yStart: -13,
+    duration: addBuffer(240),
+  },
+];
 
 export const partyDanceMix: PictureSlideProps[] = [];
