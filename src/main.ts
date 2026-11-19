@@ -9,6 +9,7 @@ import {
   doctorWho,
   elfOverture,
   hollyJollyChristmas,
+  howTheGrinchStoleChristmas,
   jingleBells,
   lastChristmas,
   polarExpress,
@@ -265,6 +266,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  howTheGrinchStoleChristmas,
   elfOverture,
   jingleBells,
   rockinChristmas,

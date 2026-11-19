@@ -129,7 +129,36 @@ export const elfOverture: PictureSlideProps[] = [
   },
 ];
 
-export const howTheGrinchStoleChristmas: PictureSlideProps[] = [];
+export const howTheGrinchStoleChristmas: PictureSlideProps[] = [
+  {
+    url: "/assets/grinch/1.png",
+    scaleStart: 280,
+    xStart: 80,
+    yStart: -20,
+    duration: addBuffer(65),
+  },
+  {
+    url: "/assets/grinch/2.png",
+    scaleStart: 280,
+    xStart: -20,
+    yStart: 80,
+    duration: addBuffer(70),
+  },
+  {
+    url: "/assets/grinch/3.png",
+    scaleStart: 200,
+    xStart: 80,
+    yStart: 10,
+    duration: addBuffer(70),
+  },
+  {
+    url: "/assets/grinch/4.png",
+    scaleStart: 200,
+    xStart: 0,
+    yStart: 25,
+    duration: addBuffer(120),
+  },
+];
 
 export const polarExpress: PictureSlideProps[] = [
   {
