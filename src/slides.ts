@@ -49,7 +49,29 @@ export const felizNavidad: PictureSlideProps[] = [];
 
 export const allIWantForChristmas: PictureSlideProps[] = [];
 
-export const lastChristmas: PictureSlideProps[] = [];
+export const lastChristmas: PictureSlideProps[] = [
+  {
+    url: "/assets/last christmas/1.png",
+    scaleStart: 200,
+    xStart: 35,
+    yStart: 10,
+    duration: addBuffer(120),
+  },
+  {
+    url: "/assets/last christmas/2.png",
+    scaleStart: 300,
+    xStart: 35,
+    yStart: 30,
+    duration: addBuffer(120),
+  },
+  {
+    url: "/assets/last christmas/3.png",
+    scaleStart: 300,
+    xStart: -90,
+    yStart: 10,
+    duration: addBuffer(120),
+  },
+];
 
 export const walkingInTheAir: PictureSlideProps[] = [
   // 20 - 60 139 - 370

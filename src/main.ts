@@ -8,6 +8,7 @@ import {
   cowboyChristmas,
   doctorWho,
   hollyJollyChristmas,
+  lastChristmas,
   polarExpress,
   walkingInTheAir,
 } from "./slides";
@@ -261,6 +262,7 @@ const logoSlideProps: PictureSlideProps = {
 // TODO the durations
 const pieceSlides: PictureSlideProps[][] = [
   [logoSlideProps],
+  lastChristmas,
   cowboyChristmas,
   walkingInTheAir,
   hollyJollyChristmas,
